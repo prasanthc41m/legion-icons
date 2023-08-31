@@ -9,7 +9,8 @@ install:
 	
 	cp -R material_light_cursors  $(LOCATION)
 	cp -R material_cursors  $(LOCATION)
-	echo 'Icons installed. Use GNOME_TWEAK to change.'
+	gsettings set  org.gnome.desktop.interface cursor-theme material_light_cursors
+	echo 'Icons installed.'
 
 uninstall:
 	rm -rf $(LOCATION)/material_light_cursors
