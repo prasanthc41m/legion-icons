@@ -3,12 +3,14 @@ all: clean build
 LOCATION = /usr/share/icons/
 
 build:
-	zip Legion-icons.zip material_light_cursors/* material_cursors/*
+	tar material_light_cursors.tar.gz material_cursors.tar.gz
 
 install:
-	
+	tar -xvzf material_light_cursors.tar.gz
+	tar -xvzf material_cursors.tar.gz
 	cp -R material_light_cursors  $(LOCATION)
 	cp -R material_cursors  $(LOCATION)
+	sleep 5
 	gsettings set  org.gnome.desktop.interface cursor-theme material_light_cursors
 	echo 'Icons installed.'
 
@@ -19,4 +21,4 @@ uninstall:
 reinstall: uninstall install
 
 clean:
-	rm -f *.zip
+	rm -f *.tar
