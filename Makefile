@@ -6,8 +6,8 @@ build:
 	tar material_light_cursors.tar.gz material_cursors.tar.gz
 
 install:
-	tar -xvzf material_light_cursors.tar.gz
-	tar -xvzf material_cursors.tar.gz
+	tar xvzf  material_light_cursors.tar.gz
+	tar xvzf  material_cursors.tar.gz
 	cp -R material_light_cursors  $(LOCATION)
 	cp -R material_cursors  $(LOCATION)
 	sleep 5
