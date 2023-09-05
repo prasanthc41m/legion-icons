@@ -3,11 +3,11 @@ all: clean build
 LOCATION = /usr/share/icons/
 
 build:
-	tar material_light_cursors.tar.gz material_cursors.tar.gz
+	tar material-light-cursors.tar.gz material-cursors.tar.gz
 
 install:
-	tar xvzf  material_light_cursors.tar.gz
-	tar xvzf  material_cursors.tar.gz
+	tar xvzf  material-light-cursors.tar.gz
+	tar xvzf  material-cursors.tar.gz
 	cp -R material_light_cursors  $(LOCATION)
 	cp -R material_cursors  $(LOCATION)
 	sleep 5
